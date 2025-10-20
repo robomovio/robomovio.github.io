@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://robomovio.github.io/sitemap.xml
