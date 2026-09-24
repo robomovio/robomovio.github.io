@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="scripts.js"></script>>
+  <link rel="icon" href="favicon.ico" />
+  <title>Robomovio | Homepage</title>
+  <!-- Leaflet CSS & JS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <!-- FontAwesome (for icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+  <!-- Leaflet.AwesomeMarkers -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/leaflet.awesome-markers@2.0.5/dist/leaflet.awesome-markers.css" />
+  <script src="https://cdn.jsdelivr.net/npm/leaflet.awesome-markers@2.0.5/dist/leaflet.awesome-markers.min.js"></script>
+
+</head>
+<body>
+  <div id="topbar" onclick="window.scrollTo(0, 0)">
+    <img src="ROBOMOVIO.png" />
+    <img src="favicon.ico" />
+  </div>
+  <div class="jumps">
+    <div onclick="window.location.href='#section_home'"><i class="fa fa-home"></i>
+      <p>Home</p>
+    </div>
+    <div onclick="window.location.href='#section_about'"><i class="fa fa-info-circle"></i>
+      <p>About</p>
+    </div>
+    <div onclick="window.location.href='#section_members'"><i class="fa fa-user-circle"></i>
+      <p>Members</p>
+    </div>
+    <div onclick="window.location.href='#section_engineering'"><i class="fa fa-gear"></i>
+      <p>Engineering</p>
+    </div>
+    <div onclick="window.location.href='#section_links'"><i class="fa fa-share-alt"></i>
+      <p>Links</p>
+    </div>
+  </div>
+  <div class="content">
+    <h1 id="start">Welcome to our homepage!</h1>
+    <section tabindex=0 class="anchor" id="section_test">
+      <h1 class="section-title">Test</h1>
+      <p>Hello</p>
+      <h1>Hello</h1>
+      <h2>Hello</h2>
+      <h3>Hello</h3>
+      <h4>Hello</h4>
+      <h5>Hello</h5>
+      <h6>Hello</h6>
+    </section>
+    <section tabindex=0 class="anchor" id="section_home">
+      <h1 class="section-title">Home</h1>
+      <p>
+        We are a team of students which participates in the FLL (First Lego League) competition. <br>
+        We design and build a robot out of lego bricks, code and upload a script and hope it works 😂<br>
+        We are excited to compete with the other teams!
+      </p>
+      <p>
+        Check out the official FLL website for more information about the competition:
+        <a target="_blank" href="https://www.first-lego-league.org/">https://www.first-lego-league.org/</a>.
+      </p>
+      <p>
+        On this website, you can find information about our team, our members and stuff we made.
+      </p>
+      <div class="image-grid">
+        <img src="" alt="Our Logo" class="img" />
+        <img src="" alt="FLL Logo" class="img" />
+      </div>
+    </section>
+    <section tabindex=0 class="anchor" id="section_about">
+      <h1 class="section-title">About Us</h1>
+      <p>
+        Were are a german team from Regensburg, Bavaria.
+      </p>
+      <h2>Map of our Location:</h2>
+      <div class="map img" id="member_map"></div>
+      <script src="map.js"></script>
+    </section>
+    <section tabindex=0 class="anchor" id="section_members">
+      <h1 class="section-title">Members</h1>
+      <p>
+        Our members are:
+      </p>
+      <ul>
+        <li>Andrei</li>
+        <li>Niko</li>
+        <li>Ferdinand</li>
+        <li>Niklas</li>
+        <li>Leo</li>
+        <li>Luca (Coach)</li>
+      </ul>
+      <p>
+        In our team, there arent any specific roles for each member, we all work together on the robot and the code.
+      </p>
+      <img src="" alt="Team Photo" class="img" />
+    </section>
+    <section tabindex=0 class="anchor" id="section_engineering">
+      <h1 class="section-title">Engineering</h1>
+      <img src="" alt="Random Engineering Note" class="img" />
+      <p>
+        This section covers the process of
+      </p>
+      <ul>
+        <li><a href="#section_engineering_defining_attributes">Defining attributes</a></li>
+        <ul>
+          <li><a href="#section_engineering_defining_attributes_robot">For the robot</a></li>
+          <li><a href="#section_engineering_defining_attributes_code">For the code</a></li>
+        </ul>
+        <li><a href="#section_engineering_designing_robot">Designing the robot</a></li>
+        <li><a href="#section_engineering_building_robot">Building the robot</a></li>
+        <li><a href="#section_engineering_programming_robot">Programming the robot</a></li>
+        <li><a href="#section_engineering_testing_debugging">Testing and debugging</a></li>
+      </ul>
+      <p>
+        And stuff from all the seasons we participated in.
+      </p>
+      <ul>
+        <li><a href="#section_engineering_season_2024_2025_submerged">Season 2024/2025: SUBMERGED</a></li>
+        <ul>
+          <li><a href="#section_engineering_season_2024_2025_submerged_about">About</a></li>
+          <li><a href="#section_engineering_season_2024_2025_submerged_run_1">Run 1</a></li>
+          <li><a href="#section_engineering_season_2024_2025_submerged_run_2">Run 2</a></li>
+          <li><a href="#section_engineering_season_2024_2025_submerged_run_3">Run 3</a></li>
+          <li><a href="#section_engineering_season_2024_2025_submerged_run_4">Run 4</a></li>
+        </ul>
+        <li><a href="#section_engineering_season_2025_2026_unearthered">Season 2025/2026: UNEARTHED (this season)</a>
+        </li>
+        <ul>
+          <li><a href="#section_engineering_season_2025_2026_unearthered_about">About</a></li>
+          <li><a href="#section_engineering_season_2025_2026_unearthered_run_1">Run 1</a></li>
+          <li><a href="#section_engineering_season_2025_2026_unearthered_run_2">Run 2</a></li>
+          <li><a href="#section_engineering_season_2025_2026_unearthered_run_3">Run 3</a></li>
+          <li><a href="#section_engineering_season_2025_2026_unearthered_run_4">Run 4</a></li>
+        </ul>
+      </ul>
+
+      <h2 id="section_engineering_defining_attributes" class="anchor">Defining attributes</h2>
+      <div class="indent">
+        <h3 id="section_engineering_defining_attributes_robot" class="anchor">For the robot</h3>
+        <div class="indent">
+          <p>We first think about these three main parts: </p>
+          <ul class="decimal">
+            <li><a href="#section_engineering_defining_attributes_robot_movement">How should the robot move?</a></li>
+            <li><a href="#section_engineering_defining_attributes_robot_interaction">How should the robot interact with the environment?</a></li>
+            <li><a href="#section_engineering_defining_attributes_robot_sense">How should the robot detect obstacles / sense other influences?</a></li>
+          </ul>
+          <h4 class="anchor" id="section_engineering_defining_attributes_robot_movement">1. Movement</h4>
+          <div class="indent collapse">
+            <p>Well, for moving, the robot needs wheels. The wheels have to be powered by motors. So, we could either
+              use a
+            </p>
+            <ul>
+              <li>tank driven robot (2 wheels, next to each other and a wheel / marble, stabilizes the robot)</li>
+              <li>or a robot with a steering like a car (2 wheels at the back (move the robot forwards) and 1 - 2 wheels
+                steering)
+              </li>
+            </ul>
+            <p>We chose the first approach because it only needs two wheels and a marble (which are included in the
+              standard spike prime set) and because the other option is very difficult to build.
+            </p>
+            <img src="" class="img" alt="Robot base sketch">
+          </div>
+          <h4 class="anchor" id="section_engineering_defining_attributes_robot_interaction">2. Interaction</h4>
+          <div class="indent collapse">
+            <p>
+              For the interaction, the robot needs motors + specific arms or mechanical mechanisms to solve the
+              stations.
+              Every station is different and we can only use up to 4 motors. So it's very important to reuse the motors.
+              <br><br>
+              We already use 2 motors for moving so we can effectively use the 2 other motors. There are 2 ways:
+            </p>
+            <ul>
+              <li>Build one arm which could solve all tasks</li>
+              <li>Build different extensions which use a specific interface to connnect to the robot and the motors
+              </li>
+            </ul>
+            <p>The second approach is definitely the best because these extensions can vary between the task and exactly
+              fit with it.
+            </p>
+            <img src="" class="img" alt="Robot-extension interface">
+          </div>
+          <h4 class="anchor" id="section_engineering_defining_attributes_robot_sense">3. Sense</h4>
+          <div class="indent collapse">
+            <p>
+              Let's assume the extension motors have a lot of friction and the task isn't aligned properly to the map.
+              The ground could be very unconsistent and slippery to. <br>
+              If you now run your working code on the robot, it will completely mess up. So what to do? <br><br>
+              <strong>Use sensors!</strong><br><br>
+              Following sensor types are available for us:
+            </p>
+            <ul>
+              <li>Touchsensor: <br>
+              (detects pressure on the button at the front)</li>
+              <li>Colorsensor<br>
+                (detects colors, light reflection / brightness)
+              </li>
+              <li>Distance- / Ultrasonicsensor: <br>
+                (measures distance / Sends and recieves signals with ultrasonic
+                frequencies)</li>
+              <li>Gyrosensor: <br>
+                (measures angular velocity, motion and orientation)</li>
+            </ul>
+            <p>We can use any combination and count of these sensors.<br>
+              <strong>But:</strong><br>
+              We already use 4 motors and the spike prime hub has just 6 ports, so 2 connections left for sensors.<br>
+              We don't need an external Gyro because the Spike Prime has one integrated. After a bit of brainstorming it became clear that we should use two color sensors for aligning the robot at lines next to tasks and to follow lines. But we're still not sure if we should attach each next to one wheel for alignment or at the front of the robot to follow lines.
+            </p>
+            <img src="" class="img" alt="Colorsensor position for line-following">
+            <img src="" class="img" alt="Colorsensor position for alignment">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section tabindex=0 class="anchor" id="section_links">
+      <h1 class="section-title">Links</h1>
+      <p>
+        Here are some links to our social media accounts, platforms we use and other useful resources:
+      </p>
+      <ul>
+        <li><a class="anchor" id="links_github" href="https://www.github.com/robomovio/">GitHub (File management)</a>
+        </li>
+        <li><a class="anchor" id="links_figma" href="https://www.figma.com">Figma (Graphics Design)</a></li>
+        <li><a class="anchor" id="links_lego_studio" href="https://store.bricklink.com/v2/studio/download.page">Lego
+            Studio (Lego Design)</a></li>
+      </ul>
+    </section>
+  </div>
+</body>
+
+</html>
