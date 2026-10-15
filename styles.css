@@ -10,7 +10,6 @@
 :root {
     --yellow: #ffcd00;
     --magenta: #c71977;
-    --magenta-dark: #a5115f;
     --azure: #00b8d9;
 
     --paper: #faf7f2;
@@ -139,7 +138,7 @@ html.lang-en .de {
     color: var(--paper);
 }
 
-/* Hero: one big yellow brick, studs along the top edge */
+/* Hero: a yellow brick with studs on top, sitting on a magenta and an azure plate */
 .hero {
     max-width: calc(var(--wrap) + 2 * var(--gutter));
     margin: 2rem auto 0;
@@ -152,6 +151,7 @@ html.lang-en .de {
     padding: clamp(2.5rem, 7vw, 5.5rem) clamp(1.5rem, 6vw, 4.5rem) clamp(2.5rem, 6vw, 4.5rem);
     color: var(--ink);
     background: var(--yellow);
+    box-shadow: 0 14px 0 var(--magenta), 0 28px 0 var(--azure);
 }
 
 .hero-inner::before {
@@ -188,7 +188,7 @@ html.lang-en .de {
     padding: 0.85rem 1.4rem;
     border-radius: 999px;
     border: 0;
-    background: var(--magenta);
+    background: var(--ink);
     color: #fff;
     text-decoration: none;
     cursor: pointer;
@@ -196,14 +196,14 @@ html.lang-en .de {
 }
 
 .button:hover {
-    background: var(--magenta-dark);
+    background: var(--magenta);
 }
 
 /* Key facts under the hero */
 .facts {
     max-width: var(--wrap);
     margin: 0 auto;
-    padding: 2rem var(--gutter) 0;
+    padding: 3.6rem var(--gutter) 0;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
