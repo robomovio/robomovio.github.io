@@ -6,12 +6,12 @@
     box-sizing: border-box;
 }
 
-/* Own palette: cobalt + signal yellow on paper (kept clear of the sponsor's colours) */
+/* LEGO SPIKE Prime colours (sampled from the set): hub yellow, beam magenta, motor azure */
 :root {
-    --blue: #2346f5;
-    --blue-dark: #1733c8;
-    --yellow: #ffd23f;
-    --yellow-dark: #f5c400;
+    --yellow: #ffcd00;
+    --magenta: #c71977;
+    --magenta-dark: #a5115f;
+    --azure: #00b8d9;
 
     --paper: #faf7f2;
     --ink: #15171e;
@@ -40,7 +40,12 @@ body {
 }
 
 a {
-    color: var(--blue);
+    color: var(--magenta);
+}
+
+::selection {
+    background: var(--azure);
+    color: var(--ink);
 }
 
 /* Language switching: html.lang-de hides .en and vice versa */
@@ -87,8 +92,8 @@ html.lang-en .de {
     width: 34px;
     height: 34px;
     border-radius: 50%;
-    background: var(--blue);
-    color: #fff;
+    background: var(--yellow);
+    color: var(--ink);
     font-weight: 900;
     font-stretch: 100%;
     font-size: 1.15rem;
@@ -108,7 +113,7 @@ html.lang-en .de {
 }
 
 .nav-links a:hover {
-    color: var(--blue);
+    color: var(--magenta);
 }
 
 .lang-switch {
@@ -134,7 +139,7 @@ html.lang-en .de {
     color: var(--paper);
 }
 
-/* Hero: one big cobalt brick, studs along the top edge */
+/* Hero: one big yellow brick, studs along the top edge */
 .hero {
     max-width: calc(var(--wrap) + 2 * var(--gutter));
     margin: 2rem auto 0;
@@ -145,8 +150,8 @@ html.lang-en .de {
     position: relative;
     border-radius: 28px;
     padding: clamp(2.5rem, 7vw, 5.5rem) clamp(1.5rem, 6vw, 4.5rem) clamp(2.5rem, 6vw, 4.5rem);
-    color: #fff;
-    background: var(--blue);
+    color: var(--ink);
+    background: var(--yellow);
 }
 
 .hero-inner::before {
@@ -156,7 +161,7 @@ html.lang-en .de {
     right: 28px;
     top: -13px;
     height: 14px;
-    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='14'%3E%3Crect x='22' width='52' height='24' rx='5' fill='%232346f5'/%3E%3C/svg%3E") space no-repeat;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='14'%3E%3Crect x='22' width='52' height='24' rx='5' fill='%23ffcd00'/%3E%3C/svg%3E") space no-repeat;
     background-size: 96px 14px;
 }
 
@@ -183,7 +188,7 @@ html.lang-en .de {
     padding: 0.85rem 1.4rem;
     border-radius: 999px;
     border: 0;
-    background: var(--blue);
+    background: var(--magenta);
     color: #fff;
     text-decoration: none;
     cursor: pointer;
@@ -191,16 +196,7 @@ html.lang-en .de {
 }
 
 .button:hover {
-    background: var(--blue-dark);
-}
-
-.button-accent {
-    background: var(--yellow);
-    color: var(--ink);
-}
-
-.button-accent:hover {
-    background: var(--yellow-dark);
+    background: var(--magenta-dark);
 }
 
 /* Key facts under the hero */
@@ -307,7 +303,7 @@ h3 {
 }
 
 .link-list a:hover .link-title {
-    color: var(--blue);
+    color: var(--magenta);
     text-decoration: underline;
 }
 
@@ -388,7 +384,7 @@ h3 {
 
 #contact-form input:focus,
 #contact-form textarea:focus {
-    outline: 2px solid var(--blue);
+    outline: 2px solid var(--magenta);
     outline-offset: 1px;
     border-color: transparent;
 }
@@ -421,7 +417,7 @@ h3 {
 }
 
 .dot-main {
-    background: var(--blue);
+    background: var(--azure);
 }
 
 .dot-alt {
