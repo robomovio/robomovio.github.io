@@ -42,8 +42,8 @@ function initMap() {
     }).addTo(map);
 
     const places = [
-        { lat: 49.0001171, lng: 12.1041891, title: 'MINT-Labs Regensburg', color: '#fa1909', size: 20 },
-        { lat: 49.00844192504883, lng: 12.14494800567627, title: 'Continental / Aumovio', color: '#5c2a9a', size: 16 }
+        { lat: 49.0001171, lng: 12.1041891, title: 'MINT-Labs Regensburg', color: '#00b8d9', size: 20 },
+        { lat: 49.00844192504883, lng: 12.14494800567627, title: 'Continental / Aumovio', color: '#15171e', size: 16 }
     ];
 
     map.fitBounds(places.map(p => [p.lat, p.lng]), { padding: [40, 40] });

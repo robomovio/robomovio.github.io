@@ -6,17 +6,16 @@
     box-sizing: border-box;
 }
 
-/* Colours are sampled from the team logo */
+/* LEGO SPIKE Prime colours (sampled from the set): hub yellow, beam magenta, motor azure */
 :root {
-    --violet: #5c2a9a;
-    --violet-dark: #45207a;
-    --red: #fa1909;
-    --orange: #ff8e08;
+    --yellow: #ffcd00;
+    --magenta: #c71977;
+    --azure: #00b8d9;
 
     --paper: #faf7f2;
-    --ink: #1c1524;
-    --ink-soft: #564d5f;
-    --line: #e4ddd3;
+    --ink: #15171e;
+    --ink-soft: #545966;
+    --line: #e2dfd8;
 
     --success: #1f7a3d;
     --error: #c0170a;
@@ -40,7 +39,12 @@ body {
 }
 
 a {
-    color: var(--violet);
+    color: var(--magenta);
+}
+
+::selection {
+    background: var(--azure);
+    color: var(--ink);
 }
 
 /* Language switching: html.lang-de hides .en and vice versa */
@@ -81,8 +85,18 @@ html.lang-en .de {
     margin-right: auto;
 }
 
-.logo img {
+.logo-mark {
+    display: grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
     border-radius: 50%;
+    background: var(--yellow);
+    color: var(--ink);
+    font-weight: 900;
+    font-stretch: 100%;
+    font-size: 1.15rem;
+    line-height: 1;
 }
 
 .nav-links {
@@ -98,7 +112,7 @@ html.lang-en .de {
 }
 
 .nav-links a:hover {
-    color: var(--violet);
+    color: var(--magenta);
 }
 
 .lang-switch {
@@ -124,27 +138,31 @@ html.lang-en .de {
     color: var(--paper);
 }
 
-/* Hero: the logo's gradient, violet top left running into red and orange */
+/* Hero: a yellow brick with studs on top, sitting on a magenta and an azure plate */
 .hero {
     max-width: calc(var(--wrap) + 2 * var(--gutter));
-    margin: 1.5rem auto 0;
+    margin: 2rem auto 0;
     padding: 0 var(--gutter);
 }
 
 .hero-inner {
+    position: relative;
     border-radius: 28px;
     padding: clamp(2.5rem, 7vw, 5.5rem) clamp(1.5rem, 6vw, 4.5rem) clamp(2.5rem, 6vw, 4.5rem);
-    color: #fff;
-    background:
-        radial-gradient(90% 120% at 0% 0%, var(--violet) 0%, rgba(92, 42, 154, 0) 60%),
-        radial-gradient(70% 90% at 100% 100%, var(--orange) 0%, rgba(255, 142, 8, 0) 70%),
-        #e62a10;
+    color: var(--ink);
+    background: var(--yellow);
+    box-shadow: 0 14px 0 var(--magenta), 0 28px 0 var(--azure);
 }
 
-.hero-kicker {
-    font-weight: 600;
-    opacity: 0.85;
-    margin-bottom: 1rem;
+.hero-inner::before {
+    content: "";
+    position: absolute;
+    left: 28px;
+    right: 28px;
+    top: -13px;
+    height: 14px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='14'%3E%3Crect x='22' width='52' height='24' rx='5' fill='%23ffcd00'/%3E%3C/svg%3E") space no-repeat;
+    background-size: 96px 14px;
 }
 
 .hero h1 {
@@ -170,7 +188,7 @@ html.lang-en .de {
     padding: 0.85rem 1.4rem;
     border-radius: 999px;
     border: 0;
-    background: var(--violet);
+    background: var(--ink);
     color: #fff;
     text-decoration: none;
     cursor: pointer;
@@ -178,23 +196,14 @@ html.lang-en .de {
 }
 
 .button:hover {
-    background: var(--violet-dark);
-}
-
-.button-light {
-    background: #fff;
-    color: var(--ink);
-}
-
-.button-light:hover {
-    background: var(--paper);
+    background: var(--magenta);
 }
 
 /* Key facts under the hero */
 .facts {
     max-width: var(--wrap);
     margin: 0 auto;
-    padding: 2rem var(--gutter) 0;
+    padding: 3.6rem var(--gutter) 0;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
@@ -294,7 +303,7 @@ h3 {
 }
 
 .link-list a:hover .link-title {
-    color: var(--violet);
+    color: var(--magenta);
     text-decoration: underline;
 }
 
@@ -375,7 +384,7 @@ h3 {
 
 #contact-form input:focus,
 #contact-form textarea:focus {
-    outline: 2px solid var(--violet);
+    outline: 2px solid var(--magenta);
     outline-offset: 1px;
     border-color: transparent;
 }
@@ -408,11 +417,11 @@ h3 {
 }
 
 .dot-main {
-    background: var(--red);
+    background: var(--azure);
 }
 
 .dot-alt {
-    background: var(--violet);
+    background: var(--ink);
 }
 
 .map-pin {
@@ -430,17 +439,35 @@ h3 {
 .footer-inner {
     max-width: var(--wrap);
     margin: 0 auto;
-    padding: 1.75rem var(--gutter) 2.5rem;
+    padding: 2rem var(--gutter) 2.5rem;
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem 2rem;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem 2rem;
     font-size: 0.95rem;
     color: var(--ink-soft);
 }
 
-.footer-inner a {
+.sponsor {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.sponsor img {
+    display: block;
+    height: 26px;
+    width: auto;
+}
+
+.footer-meta {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer-meta a {
     color: var(--ink-soft);
-    margin-left: auto;
 }
 
 /* Tablet */
@@ -481,8 +508,9 @@ h3 {
         grid-template-columns: 1fr;
     }
 
-    .footer-inner a {
-        margin-left: 0;
+    .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
     }
 }
 
